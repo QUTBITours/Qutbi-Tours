@@ -1,0 +1,55 @@
+/* About Section Styles */
+.about {
+  background-color: var(--neutral-100);
+  padding: var(--space-7) 0;
+}
+
+.about .container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.about-content {
+  flex: 1;
+}
+
+.about-content h2 {
+  text-align: left;
+  margin-bottom: var(--space-3);
+}
+
+.about-content h2::after {
+  margin-left: 0;
+}
+
+.about-content p {
+  margin-bottom: var(--space-3);
+  color: var(--neutral-700);
+}
+
+.about-image {
+  flex: 1;
+  position: relative;
+  height: 400px;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+}
+
+.about-image::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--primary);
+  border-radius: var(--radius-md);
+  z-index: -1;
+}

@@ -1,0 +1,62 @@
+/* Header Styles */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-2) 0;
+  z-index: 1000;
+  transition: all var(--transition-normal);
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 1.75rem;
+  color: var(--primary);
+  margin: 0;
+}
+
+.nav ul {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.nav a {
+  font-weight: 600;
+  color: var(--neutral-700);
+  position: relative;
+  padding: var(--space-1) 0;
+}
+
+.nav a:hover {
+  color: var(--primary);
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary);
+  transition: width var(--transition-normal);
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* Scroll state */
+.header.scrolled {
+  padding: var(--space-1) 0;
+  background-color: white;
+  box-shadow: var(--shadow-md);
+}

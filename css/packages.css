@@ -1,0 +1,74 @@
+/* Packages Section Styles */
+.packages {
+  background-color: white;
+  padding: var(--space-7) 0;
+}
+
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.package-card {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  background-color: white;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.package-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.package-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.package-card:hover .package-image img {
+  transform: scale(1.05);
+}
+
+.package-price {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  background-color: var(--primary);
+  color: white;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-md);
+  font-weight: bold;
+  box-shadow: var(--shadow-sm);
+}
+
+.package-content {
+  padding: var(--space-3);
+}
+
+.package-content h3 {
+  margin-bottom: var(--space-2);
+  color: var(--neutral-800);
+}
+
+.package-content p {
+  color: var(--neutral-600);
+  margin-bottom: var(--space-3);
+  height: 4.5em; /* Roughly 3 lines of text */
+  overflow: hidden;
+}
+
+.package-content .btn {
+  width: 100%;
+}
